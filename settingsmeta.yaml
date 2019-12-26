@@ -1,22 +1,16 @@
-
 skillMetadata:
   sections:
-    - name: Options << Name of section
-      fields:
-        - name: internal_python_variable_name
-          type: text
-          label: Setting Friendly Display Name
-          value: ""
-          placeholder: demo prompt in the input box
-    - name: Login << Name of another section
+    - name: Feed Settings
       fields:
         - type: label
-          label: Just a little bit of extra info for the user to understand following settings
-        - name: username
-          type: text
-          label: Username
-          value: ""
-        - name: password
-          type: password
-          label: Password
-          value: ""
+          label: Select a language for the national news and a regional station for the local news from the menus below. By default, Mycroft will play the national news in English and the regional news from Pune in Marathi. 
+        - name: language
+          type: select
+          label: Listen to the national news in
+          options: "English|eng;Hindi|hin;Urdu|urd;Assamese|asm;Bengali|ben;Dogri|dog;Gujarati|guj;Kannada|kan;Kashmiri|kas;Konkani|kon;Malayalam|mal;Marathi|mar;Nepali|nep;Odia|odi;Punjabi|pun;Sanskrit|san;Tamil|tam;Telugu|tel"
+          value: "eng"
+        - name: station
+          type: select
+          label: Select a station for local news
+          options: "Agartala (Kokborok)|aga-kok;Agartala (Bengali)|aga-ben;Ahmedabad (Gujarati)|ahm-guj;Ahmedabad (Sindhi)|ahm-sin;Aizawl (Mizo)|aiz-miz;Aurangabad (Marathi)|aur-mar;Aurangabad (Urdu)|aur-urd;Bangalore (Kannada)|ban-kan;Bhopal (Hindi)|bho-hin;Bhuj (Gujarati)|bhu-guj;Calicut (Malayalam)|cal-mal;Chandigarh (Hindi)|cha-hin;Chandigarh (Punjabi)|cha-pun;Chennai (Tamil)|che-tam;Cuttack (Odia)|cut-odi;Dehradun (Hindi)|deh-hin;Dharwad (Kannada)|dha-kan;Dibrugarh (Assamese)|dib-asm;Gangtok (Nepali)|gan-nep;Gangtok (Lepcha)|gan-lep;Gangtok (Bhutia)|gan-bhu;Gorakhpur (Hindi)|gor-hin;Gorakhpur (Bhojpuri)|gor-bho;Guwahati (Assamese)|guw-asm;Guwahati (Karbi)|guw-kar;Guwahati (Nepali)|guw-nep;Guwahati (Bodo)|guw-bod;Hyderabad (Telugu)|hyd-tel;Hyderabad (Urdu)|hyd-urd;Imphal (Manipuri)|imp-man;Itanagar (Hindi)|ita-hin;Itanagar (English)|ita-eng;Jaipur (Hindi)|jai-hin;Jaipur (Rajasthani)|jai-raj;Jammu (Gojri)|jam-goj;Jammu (Dogri)|jam-dog;Kohima (Nagamese)|koh-nag;Kohima (English)|koh-eng;Kolkata (Bengali)|kol-ben;Kurseong (Nepali)|kur-nep;Leh (Ladakhi)|leh-lad;Lucknow (Hindi)|luc-hin;Lucknow (Urdu)|luc-urd;Mumbai (Marathi)|mum-mar;Nagpur (Marathi)|nag-mar;Panaji (Konkani)|pan-kon;Patna (Hindi)|pat-hin;Patna (Maithili)|pat-mai;Pudducherry (Tamil)|pud-tam;Pune (Marathi)|pun-mar;Raipur (Chhatisgar)|rai-chh;Raipur (Hindi)|rai-hin;Ranchi (Hindi)|ran-hin;Sambalpur (Sambalpuri)|sam-sam;Shillong (Jaintia)|shi-jai;Shillong (English)|shi-eng;Shillong (Khasi)|shi-kha;Shillong (Garo)|shi-gar;Shimla (Hindi)|shi-hin;Silchar (Bengali)|sil-ben;Tiruchirapalli (Tamil)|tir-tam;Thiruvanantapuram (Malayalam)|thi-mal;Vijayawada (Telugu)|vij-tel;Visakhapatnam (Telugu)|vis-tel"
+          value: "pun-mar"
