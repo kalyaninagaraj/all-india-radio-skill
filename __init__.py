@@ -8,8 +8,9 @@ import requests
 
 phrase_dict = {
     'all india radio': 'national',
+    'national news on all india radio': 'national',
     'local news on all india radio': 'local',
-    'national news on all india radio': 'national'
+    'regional news on all india radio': 'local'
 }
 category = {
     'local': 'http://newsonair.nic.in/Regional_Audio_rss.aspx',
@@ -115,14 +116,12 @@ class AllIndiaRadio(CommonPlaySkill):
                             optional data(dict))
                      or None if no match was found.
         """
-        # Get match and confidence
-        confidence = fuzzy_match(phrase, 'all india radio')
-        # If the confidence is high enough return a match
-        if confidence > 0.5:
-            match = 'local' if self.voc_match(phrase, 'local') else 'national'
-            return (match, CPSMatchLevel.TITLE, {'categ': match})
+        match, confidence = match_one(phrase, phrase_dict)
+        if confidence > 0.6:
+            return (match, CPSMatchLevel.EXACT, {'categ': match})
         else:
             return None
+
 
     def CPS_start(self, phrase, data):
         """ Starts playback.

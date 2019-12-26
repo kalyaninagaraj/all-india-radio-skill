@@ -2,8 +2,10 @@
 Plays the latest news bulletin from All India Radio.
 
 ## About
+By default, this skill plays the national news in English, and the regional news from Pune in Marathi. To change the language and local station settings, update the configuration on the [home.mycroft.ai](https://home.mycroft.ai)
 
-
+The pre-recorded news bulletins are streamed from All India Radio's News Service Division. For more information, visit their [podcast page](http://www.newsonair.nic.in/Podcast.aspx).
+ 
 ## Examples
 * "Play All India Radio"
 * "Play the national news on All India Radio"
