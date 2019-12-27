@@ -1,6 +1,6 @@
-from mycroft import MycroftSkill, intent_handler, intent_file_handler
+from mycroft import MycroftSkill
 from mycroft.skills.common_play_skill import CommonPlaySkill, CPSMatchLevel
-from mycroft.util.parse import fuzzy_match, match_one
+from mycroft.util.parse import match_one
 from mycroft.audio import wait_while_speaking
 from datetime import datetime, timedelta
 import feedparser
@@ -117,7 +117,7 @@ class AllIndiaRadio(CommonPlaySkill):
                      or None if no match was found.
         """
         match, confidence = match_one(phrase, phrase_dict)
-        if confidence > 0.6:
+        if confidence > 0.8:
             return (match, CPSMatchLevel.EXACT, {'categ': match})
         else:
             return None
