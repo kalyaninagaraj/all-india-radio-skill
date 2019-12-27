@@ -138,7 +138,6 @@ class AllIndiaRadio(CommonPlaySkill):
                     if bd > dt_now - bt:
                         bd = dt_now - bt
                         link = requests.get(e.enclosures[0].href)
-                        break
         elif data['categ'] == 'national' and self.settings.get('language') == 'eng':
             for e in rss_parsed.entries:
                 if e.author == 'English' and (('Morning' in e.title) or ('Midday'in e.title) or ('Nine'in e.title)):
@@ -146,7 +145,6 @@ class AllIndiaRadio(CommonPlaySkill):
                     if bd > dt_now - bt:
                         bd = dt_now - bt
                         link = requests.get(e.enclosures[0].href)
-                        break
         elif data['categ'] == 'national':
             for e in rss_parsed.entries:
                 if e.author == language[self.settings.get('language')]:
@@ -154,7 +152,6 @@ class AllIndiaRadio(CommonPlaySkill):
                     if bd > dt_now - bt:
                         bd = dt_now - bt
                         link = requests.get(e.enclosures[0].href)
-                        break
         url = link.url.replace('https', 'http', 1) # replace 'https' with 'http'
         self.log.info(url)
         self.speak('Playing the latest news bulletin from All India Radio:')
