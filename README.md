@@ -12,7 +12,7 @@ This skill can play either the national news (by default, in English), or the re
 * "Play the local news on All India Radio"
 
 ## Credits
-kalyaninagaraj
+[@kalyaninagaraj](https://github.com/kalyaninagaraj/)
 
 ## Category
 **Daily**
