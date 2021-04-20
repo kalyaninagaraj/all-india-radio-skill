@@ -1,3 +1,23 @@
+"""
+About
+-----
+Mycroft streams five to fifteen minute news bulletins from 
+All India Radio's News Service Division website. 
+
+For more information about the streaming service, visit its
+podcast page. 
+
+This skill can play either the national news (by default, 
+in English), or the regional news (by default, from Pune 
+in Marathi). To change to a different language or local 
+station, modify the skill settings at home.mycroft.ai.
+
+Author
+------
+Kalyani Nagaraj
+Dec 2019
+"""
+
 from mycroft import MycroftSkill
 from mycroft.skills.common_play_skill import CommonPlaySkill, CPSMatchLevel
 from mycroft.util.parse import match_one
